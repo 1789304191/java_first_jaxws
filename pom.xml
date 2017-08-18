@@ -19,15 +19,13 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>java_first_jaxws</artifactId>
+
     <packaging>war</packaging>
     <name>Java First demo using JAX-WS APIs</name>
     <description>Java First demo using JAX-WS APIs</description>
-    <parent>
-        <groupId>org.apache.cxf.samples</groupId>
-        <artifactId>cxf-samples</artifactId>
-        <version>3.1.11</version>
-    </parent>
+    <groupId>org.apache.cxf.samples</groupId>
+    <artifactId>java_first_jaxws</artifactId>
+    <version>3.1.11</version>
     <properties>
         <cxf.version>${project.version}</cxf.version>
         <cxf.release.base>${basedir}/../..</cxf.release.base>
@@ -123,11 +121,28 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
+            <version>4.1.9.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
+            <version>4.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-jdk14</artifactId>
+            <version>1.7.24</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>1.7.24</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http-jetty</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>
