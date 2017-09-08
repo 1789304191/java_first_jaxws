@@ -26,11 +26,11 @@ public class IDispatchControl extends Service {
     static {
         URL url = null;
         try {
-            url = new URL("http://*/provfront/services/businessService?wsdl");
+            url = new URL("http://116.228.151.50:7000/provfront/services/businessService?wsdl");
         } catch (MalformedURLException e) {
             java.util.logging.Logger.getLogger(IDispatchControl.class.getName())
                 .log(java.util.logging.Level.INFO, 
-                     "Can not initialize the default wsdl from {0}", "http://*/provfront/services/businessService?wsdl");
+                     "Can not initialize the default wsdl from {0}", "http://116.228.151.50:7000/provfront/services/businessService?wsdl");
         }
         WSDL_LOCATION = url;
     }
