@@ -19,6 +19,8 @@
 // START SNIPPET: service
 package demo.hw.server;
 
+import com.huateng.haobai.ppcore.control.DispatchControlUtil;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -27,24 +29,23 @@ import javax.jws.WebService;
 @WebService(endpointInterface = "demo.hw.server.HelloWorld",
             serviceName = "HelloWorld")
 public class HelloWorldImpl implements HelloWorld {
-    Map<Integer, User> users = new LinkedHashMap<Integer, User>();
+//    Map<Integer, User> users = new LinkedHashMap<Integer, User>();
 
 
-    public String sayHi(String text) {
-        System.out.println("sayHi called");
-        return "Hello " + text;
+    public String sayHi(String cn0,String cn1) {
+        return DispatchControlUtil.dispatchCommand(cn0,cn1);
     }
 
-    public String sayHiToUser(User user) {
-        System.out.println("sayHiToUser called");
-        users.put(users.size() + 1, user);
-        return "Hello "  + user.getName();
-    }
+//    public String sayHiToUser(User user) {
+//        System.out.println("sayHiToUser called");
+//        users.put(users.size() + 1, user);
+//        return "Hello "  + user.getName();
+//    }
 
-    public Map<Integer, User> getUsers() {
-        System.out.println("getUsers called");
-        return users;
-    }
+//    public Map<Integer, User> getUsers() {
+//        System.out.println("getUsers called");
+//        return users;
+//    }
 
 }
 // END SNIPPET: service

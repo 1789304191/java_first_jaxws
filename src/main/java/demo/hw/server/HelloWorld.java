@@ -28,14 +28,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @WebService
 public interface HelloWorld {
 
-    String sayHi(String text);
+    String sayHi(String cn0,String cn1);
 
 
     /* Advanced usecase of passing an Interface in.  JAX-WS/JAXB does not
      * support interfaces directly.  Special XmlAdapter classes need to
      * be written to handle them
      */
-    String sayHiToUser(User user);
+//    String sayHiToUser(User user);
 
 
     /* Map passing
@@ -43,7 +43,7 @@ public interface HelloWorld {
      * not supported directly.  They also require use of a XmlAdapter to map
      * the maps into beans that JAXB can use. 
      */
-    @XmlJavaTypeAdapter(IntegerUserMapAdapter.class)
-    Map<Integer, User> getUsers();
+//    @XmlJavaTypeAdapter(IntegerUserMapAdapter.class)
+//    Map<Integer, User> getUsers();
 }
 // END SNIPPET: service
