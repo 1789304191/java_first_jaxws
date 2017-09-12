@@ -8,12 +8,12 @@ import java.net.URL;
  */
 public class DispatchControlUtil {
 
-    private static final QName SERVICE_NAME = new QName("http://control.ppcore.haobai.huateng.com", "IDispatchControl");
+    private static final QName SERVICE_NAME = new QName("http://control.ppcore.haobai.huateng.com", "IDispatchControl1");
 
     public static String dispatchCommand(String cn0,String cn1){
-        URL wsdlURL = IDispatchControl.WSDL_LOCATION;
-        IDispatchControl ss = new IDispatchControl(wsdlURL, SERVICE_NAME);
-        IDispatchControlPortType port = ss.getIDispatchControlHttpPort();
+        URL wsdlURL = IDispatchControl1.WSDL_LOCATION;
+        IDispatchControl1 ss = new IDispatchControl1(wsdlURL, SERVICE_NAME);
+        IDispatchControl1PortType port = ss.getIDispatchControl1HttpPort();
         System.out.println("Invoking dispatchCommand...");
         String _dispatchCommand__return = port.dispatchCommand(cn0,cn1);
         return _dispatchCommand__return;
